@@ -1,5 +1,8 @@
 {
   "name": "myMap",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "7cefcace",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
