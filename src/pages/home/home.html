@@ -1,0 +1,108 @@
+<style>
+  a[href^="http://maps.google.com/maps"] {
+    display: none !important
+  }
+
+  a[href^="https://maps.google.com/maps"] {
+    display: none !important
+  }
+
+  .gmnoprint a,
+  .gmnoprint span,
+  .gm-style-cc {
+    display: none;
+  }
+
+  .gmnoprint div {
+    background: none !important;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-item>
+     <ion-input type="text"  rows="6"  (keyup)="test()"></ion-input>
+    <button ion-button item-right icon-right margin-bottom color="primary" (click)="addEntry()">
+            Add a technology
+            <ion-icon name="add"></ion-icon>
+      </button>
+  </ion-item>
+  <ion-item *ngFor="let item of items ">
+    <h2>{{ item.id }} - {{ item.name}} "{{ item.description }}" </h2>
+    <button ion-button color="primary" item-right (click)="viewEntry({ record: item })">View</button>
+  </ion-item>
+
+
+  <ion-card class="adv-map">
+    <div style="position: relative">
+      <section id="contact" class="map">
+        <iframe width="100%" height="250" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/directions?origin=avenida paraguai&destination=rua venezuela&key=AIzaSyDnhVHI8TZiRSCNQTMqXpNO38mLvN3j6AM"></iframe>
+      </section>
+      <ion-fab right top>
+        <button ion-fab color="danger" class="fab-map">
+        <ion-icon name='pin'></ion-icon>
+      </button>
+      </ion-fab>
+    </div>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='football'></ion-icon>
+      <h2>Museum of Football</h2>
+      <p>11 N. Way St, Madison, WI 53703</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='wine'></ion-icon>
+      <h2>Institute of Fine Cocktails</h2>
+      <p>14 S. Hop Avenue, Madison, WI 53703</p>
+    </ion-item>
+    <ion-item actions>
+      <span ion-text item-start color="secondary" class="item-bold">18 min</span>
+      <span ion-text item-start color="subtle">(2.6 mi)</span>
+      <button ion-button color="primary" clear item-end icon-start>
+      <ion-icon name='navigate'></ion-icon>
+      Aberto
+    </button>
+    </ion-item>
+
+  </ion-card>
+  <ion-card class="adv-map">
+    <div style="position: relative">
+      <section id="contact" class="map">
+        <iframe width="100%" height="250" frameborder="0" style="border:0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/directions?origin=New york&destination=Washington dc&key=AIzaSyDnhVHI8TZiRSCNQTMqXpNO38mLvN3j6AM"></iframe>
+      </section>
+      <ion-fab right top>
+        <button ion-fab color="danger" class="fab-map">
+        <ion-icon name='pin'></ion-icon>
+      </button>
+      </ion-fab>
+    </div>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='football'></ion-icon>
+      <h2>Museum of Football</h2>
+      <p>11 N. Way St, Madison, WI 53703</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="subtle" large item-start name='wine'></ion-icon>
+      <h2>Institute of Fine Cocktails</h2>
+      <p>14 S. Hop Avenue, Madison, WI 53703</p>
+    </ion-item>
+    <ion-item actions>
+      <span ion-text item-start color="secondary" class="item-bold">18 min</span>
+      <span ion-text item-start color="subtle">(2.6 mi)</span>
+      <button ion-button color="primary" clear item-end icon-start>
+      <ion-icon name='navigate'></ion-icon>
+      Aberto
+    </button>
+    </ion-item>
+
+  </ion-card>
+</ion-content>
